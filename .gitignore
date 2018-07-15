@@ -1,3 +1,6 @@
 PropertyTrimmer/.vs/
 PropertyTrimmer/PropertyTrimmer/bin/
 PropertyTrimmer/PropertyTrimmer/obj/
+PropertyTrimmer/PropertyTrimmer.UnitTests/obj/
+PropertyTrimmer/PropertyTrimmer.UnitTests/bin/
+PropertyTrimmer/packages/
