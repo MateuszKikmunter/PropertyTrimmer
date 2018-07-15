@@ -13,7 +13,7 @@ namespace PropertyTrimmer
         /// <typeparam name="T"></typeparam>
         /// <param name="item"></param>
         /// <param name="propertyName"></param>
-        public static void TrimProperty<T>(T item, string propertyName)
+        public static void TrimProperty<T>(T item, string propertyName) where T : class
         {
             Guard.ThrowIfNull(item);
             Guard.ThrowIfStringIsNullOrWhiteSpace(propertyName);
@@ -30,7 +30,7 @@ namespace PropertyTrimmer
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="item"></param>
-        public static void TrimProperties<T>(T item)
+        public static void TrimProperties<T>(T item) where T : class
         {
             Guard.ThrowIfNull(item);
 
