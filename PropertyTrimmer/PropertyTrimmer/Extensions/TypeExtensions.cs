@@ -13,11 +13,6 @@ namespace PropertyTrimmer.Extensions
             return type.GetProperties().Where(property => property.PropertyType == typeof(string));
         }
 
-        public static bool IsTypeOfString(this Type type)
-        {
-            return type == typeof(string);
-        }
-
         public static PropertyInfo GetPropertyByName(this Type type, string propertyName)
         {
             Guard.ThrowIfStringIsNullOrWhiteSpace(propertyName);

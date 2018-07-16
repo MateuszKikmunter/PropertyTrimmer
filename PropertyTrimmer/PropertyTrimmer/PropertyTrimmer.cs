@@ -44,7 +44,7 @@ namespace PropertyTrimmer
         /// <typeparam name="T"></typeparam>
         /// <param name="items"></param>
         /// <param name="propertyName"></param>
-        public static void TrimProperty<T>(IList<T> items, string propertyName) where T : class
+        public static void TrimProperty<T>(List<T> items, string propertyName) where T : class
         {
             Guard.ThrowIfCollectionNullOrEmpty(items);
             Guard.ThrowIfStringIsNullOrWhiteSpace(propertyName);
@@ -61,7 +61,7 @@ namespace PropertyTrimmer
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="items"></param>
-        public static void TrimProperties<T>(IList<T> items) where T : class
+        public static void TrimProperties<T>(List<T> items) where T : class
         {
             Guard.ThrowIfCollectionNullOrEmpty(items);
 
@@ -77,7 +77,7 @@ namespace PropertyTrimmer
 
         private static bool PropertyExists(PropertyInfo property)
         {
-            return property != null && property.PropertyType.IsTypeOfString();
+            return property != null && property.PropertyType == typeof(string);
         }
 
         private static void Trim<T>(T item, PropertyInfo property)

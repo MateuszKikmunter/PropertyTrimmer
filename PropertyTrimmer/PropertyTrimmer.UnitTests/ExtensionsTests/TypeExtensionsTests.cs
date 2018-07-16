@@ -76,31 +76,5 @@ namespace PropertyTrimmer.UnitTests.ExtensionsTests
             //assert
             result.Name.Should().Be(firstname);
         }
-
-        [Test]
-        public void IsTypeOfString_IntegerProperty_ShouldReturnFalse()
-        {
-            //arrange
-            var id = "Id";
-
-            //act
-            var result = _user.GetType().GetPropertyByName(id).PropertyType.IsTypeOfString();
-
-            //assert
-            result.Should().BeFalse();
-        }
-
-        [Test]
-        public void IsTypeOfString_StringProperty_ShouldReturnTrue()
-        {
-            //arrange
-            var firstName = "FirstName";
-
-            //act
-            var result = _user.GetType().GetPropertyByName(firstName).PropertyType.IsTypeOfString();
-
-            //assert
-            result.Should().BeTrue();
-        }
     }
 }

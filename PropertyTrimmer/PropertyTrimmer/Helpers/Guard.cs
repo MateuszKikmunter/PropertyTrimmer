@@ -18,7 +18,7 @@ namespace PropertyTrimmer.Helpers
         {
             if (collection == null || !collection.Any())
             {
-                throw new ArgumentException("Collection cannot be null or empty", nameof(collection));
+                throw new ArgumentException("Collection cannot be null or empty.", nameof(collection));
             }
         }
 

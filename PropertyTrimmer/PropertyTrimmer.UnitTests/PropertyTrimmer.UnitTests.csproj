@@ -53,6 +53,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExtensionsTests\PropertyTrimmerTests.cs" />
     <Compile Include="ExtensionsTests\TypeExtensionsTests.cs" />
     <Compile Include="Helpers\FakeUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
