@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using FluentAssertions;
 using NUnit.Framework;
 using PropertyTrimmer.Extensions;
@@ -36,6 +38,19 @@ namespace PropertyTrimmer.UnitTests.ExtensionsTests
             result.Should().NotBeNullOrEmpty();
             result.Should().HaveCount(2);
             result.Select(p => p.Should().BeOfType<string>());
+        }
+
+        [Test]
+        public void GetStringProperties_NoStringProperties_ReturnsEmptyCollection()
+        {
+            //arrange
+            var obj = new { Id = 1 };
+
+            //act
+            var result = obj.GetType().GetStringProperties();
+
+            //assert
+            result.Count().Should().Be(0);
         }
 
         [Test]
